@@ -13,18 +13,14 @@
     <body>
         <div class="book">
 
-            {%- include toc-date.html -%}
+            {%- include navigation.html -%}
 
             <div class="book-body">
                 <div class="book-header" role="navigation">
                     <!-- Title -->
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
-                        {% if page.title %}
-                            <a href="." >{{ page.title | escape }}</a>
-                        {% else %}
-                            <a href="." >{{ site.title | escape }}</a>
-                        {% endif %}
+                        <a href="{{site.baseurl}}/">{{ site.title | escape }}</a>
                     </h1>
                 </div>
 

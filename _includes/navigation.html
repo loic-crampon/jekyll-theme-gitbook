@@ -1,0 +1,37 @@
+<div class="book-summary">
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="{{site.baseurl}}/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            {% assign chapters = site.chapters | where: "layout", "chapter" | sort: "chapternum" %}
+            {% for chapter in chapters %}
+                {% if page.url == chapter.url %}
+                <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{chapter.url}}">
+                {% else %}
+                <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{chapter.url}}">
+                {% endif %}
+                    <a href="{{site.baseurl}}{{chapter.url}}">
+                        {{ chapter.title | escape | upcase }}
+                    </a>
+                </li>
+                {% assign sections = site.chapters | where: "layout", "section" | where: "chapternum", chapter.chapternum | sort: "sectionnum" %}
+                {% for section in sections %}
+                    {% if page.url == section.url %}
+                    <li class="section active" data-level="1.2" data-path="{{site.baseurl}}{{section.url}}">
+                    {% else %}
+                    <li class="section" data-level="1.1" data-path="{{site.baseurl}}{{section.url}}">
+                    {% endif %}
+                        <a href="{{site.baseurl}}{{section.url}}">
+                            {{ section.title | escape }}
+                        </a>
+                    </li>
+                {% endfor %}
+                <li class="divider"></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

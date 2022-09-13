@@ -47,7 +47,16 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
                 e.preventDefault();
                 window.open('http://vkontakte.ru/share.php?url='+encodeURIComponent(location.href));
             }
-        }
+        },
+        'github': {
+            'label': 'Github',
+            'icon': 'fa fa-github',
+            'onClick': function(e) {
+                e.preventDefault();
+                window.open('https://github.com/loic-crampon');
+            }
+        },
+
     };
 
 
@@ -56,7 +65,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         var opts = config.sharing;
 
         // Create dropdown menu
-        var menu = $.map(opts.all, function(id) {
+        var menu = $.map(opts.none, function(id) {
             var site = SITES[id];
 
             return {
