@@ -55,9 +55,9 @@ These custom alerts ship with the theme, but you can also use the [alert classes
 
 The theme formats the boxes for code fences, but does not provide CSS styles for syntax highlighting, since Jekyll sites can use a [number of different markdown processing engines](https://jekyllrb.com/docs/configuration/markdown/) (including custom processing plugins) and guaranteeing compatibility with the syntax highlighting output of all of them is not feasible.
 
-{% highlight bash %}
-# This is a comment, and will be styled as such if you add CSS styles for syntax highlighting
-echo "This is a command with a string, and will also be styled when appropriate CSS styles are used"
+{% highlight javascript %}
+// This is a comment, and will be styled as such if you add CSS styles for syntax highlighting
+$(document).ready(function() { alert('ready!'); });
 {% endhighlight %}
 
 

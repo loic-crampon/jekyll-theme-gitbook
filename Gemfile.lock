@@ -89,6 +89,8 @@ DEPENDENCIES
   jekyll-feed
   jekyll-readme-index
   jemoji
+  kramdown
+  rouge
   webrick
 
 BUNDLED WITH

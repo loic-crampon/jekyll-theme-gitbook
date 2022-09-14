@@ -22,7 +22,7 @@ toc:
   h_max: 3
 
 # markdown render engine.
-markdown:         kramdown
+markdown: kramdown
 kramdown:
   auto_ids:               true
   input:                  GFM
@@ -33,12 +33,12 @@ kramdown:
   syntax_highlighter_opts:
     guess_lang:           true
 
-syntax_highlighter_style: colorful
+syntax_highlighter_style: github
 
-markdown_ext:     markdown,mkdown,mkdn,mkd,md
+markdown_ext: markdown,mkdown,mkdn,mkd,md
 
 # Permalinks
-permalink:        /:categories/:year-:month-:day-:title:output_ext
+permalink: /:categories/:year-:month-:day-:title:output_ext
 
 exclude:
   - _drafts
